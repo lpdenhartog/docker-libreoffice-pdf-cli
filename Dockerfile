@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install latest stable LibreOffice
 RUN apt-get update -qq \
-    && apt-get install -y -q libreoffice \
+    && apt-get install --force-yes -q libreoffice \
     && apt-get remove -q -y libreoffice-gnome
 
 # Cleanup after apt-get commands
